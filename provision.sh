@@ -13,7 +13,14 @@ make install
 cd
 
 apt-get install -y libpcap-dev
-apt-get install -y libnet-dev
+# apt-get install -y libnet-dev
+wget http://packetfactory.openwall.net/libnet/dist/deprecated/libnet-1.0.2a.tar.gz
+tar zxvf libnet-1.0.2a.tar.gz
+cd Libnet-1.0.2a/
+./configure
+make
+make install
+
 apt-get install -y libnids-dev
 
 wget http://monkey.org/~dugsong/dsniff/dsniff-2.3.tar.gz
